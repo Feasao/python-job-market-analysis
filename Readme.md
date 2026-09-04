@@ -97,9 +97,7 @@ represent all the listings in Europe, in the dataset or across all jobs for that
    Applied `ast.literal_eval` to safely parse serialized string representations of skill lists into native Python list objects.
 3. **Denominator Standardization:**
    Calculated total postings per role (`jobs_total`) **prior** to unnesting skills:
-   $$
-   \text{Skill Percentage} = \frac{\text{Postings requiring Skill}}{\text{Total Postings for Role}}
-   $$
+   $\text{Skill Percentage} = \frac{\text{Postings requiring Skill}}{\text{Total Postings for Role}}$
 4. **Chronological Alignment:**
    Parsed date attributes using vectorized datetime extraction (`pd.to_datetime(..., format='%B').dt.month`) to avoid alphabetical month sorting artifacts across line and trend plots.
 
